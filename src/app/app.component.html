@@ -1,5 +1,59 @@
 <div>
-    <table>
+    <!-- <form action="">
+        <input type="text" (keydown)="changleInput($event)" [value]="inputValue">
+        <span>{{inputValue}}</span>
+    </form> -->
+
+    <div>
+        <h1> Angular form</h1>
+        <div>
+            <app-form></app-form>
+        </div>
+    </div>
+
+
+    <hr>
+    <br>
+    <p>Form dang ky thong tin giang vien</p>
+    <form>
+        <div class="form-group">
+            <label for="">Ten GV</label>
+            <input type="text" class="form-control" (input)="onInput($event, 'name')" [value]="this.inputValues.name">
+
+        </div>
+
+        <div class="form-group">
+            <label for="">Tuoi GV</label>
+            <input type="number" class="form-control" (input)="onInput($event, 'age')" [value]="this.inputValues.age">
+        </div>
+
+        <select (input)="onInput($event, 'gender')" [value]="this.inputValues.gender">
+            <option value="0"> Nu</option>
+            <option value="1">Nam</option>
+        </select>
+
+        <div class="form-group">
+            <label for="">Img</label>
+            <input type="text" class="form-control" (input)="onInput($event, 'avatar')">
+        </div>
+
+        <select (input)="onInput($event, 'status')" [value]="this.inputValues.status">
+            <option value="0"> 	Đã nghỉ việc    </option>
+            <option value="1">	Đag làm việc    </option>
+        </select>
+
+
+
+        <button type="button" (click)="onSubmit()"> Submit</button>
+    </form>
+
+
+    <br>
+    <button (click)="ClickH1()"> hix :  {{schoolName}}</button>
+    <hr>
+    <button class="btn btn-primary" (click)="changTableStatus()"> {{showStatus ? "ẩn" : "hiện"}} </button>
+    <table *ngIf="showStatus">
+        <!-- class="{{showStatus ?  'display-block' : 'display-none' }}" -->
         <thead>
             <tr>
                 <th>mã sv</th>

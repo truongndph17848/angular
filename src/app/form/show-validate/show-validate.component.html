@@ -1,0 +1,14 @@
+<!-- tên -->
+<span *ngIf="field.dirty && field.errors?.['required']" class="text-danger"> {{key}} ko dc để trống</span>
+<span *ngIf="field.dirty && field.errors?.['minlength']" class="text-danger"> Trên {{field.errors.['minlength'].requiredLength} ký tự</span>
+
+<!-- tuổi -->
+
+<span *ngIf="(field.dirty || field.touched ) && field.errors?.['required']" class="text-danger"> {{key}} ko dc để trống</span>
+<span *ngIf="(field.dirty || field.touched ) && field.errors?.['min']" class="text-danger"> {{key}} tối thiểu là 1</span>
+<span *ngIf="(field.dirty || field.touched ) && field.errors?.['max']" class="text-danger"> {{key}} tối đa là 100</span>
+
+
+<!-- email -->
+
+<span *ngIf="field.dirty && field.errors?.['email']" class="text-danger"> {{key}} phải đúng định dạng </span>
