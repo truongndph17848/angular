@@ -1,3 +1,5 @@
+<router-outlet> </router-outlet>
+
 <div>
     <!-- <form action="">
         <input type="text" (keydown)="changleInput($event)" [value]="inputValue">
@@ -7,7 +9,9 @@
     <div>
         <h1> Angular form</h1>
         <div>
-            <app-form></app-form>
+            <!-- <app-form></app-form> -->
+
+            <app-user></app-user>
         </div>
     </div>
 
@@ -80,4 +84,19 @@
 
 <div>
     <app-table [users]="teachers"> </app-table>
+</div>
+
+
+<div>
+    <h1>Router</h1>
+    <nav>
+        <ul>
+            <!-- sử dụng routerlink thay vì href sẽ bị load lại -->
+            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="/user">User</a></li>
+            <li><a routerLink="/admin">admin</a></li>
+        </ul>
+    </nav>
+    <!-- đây là nơi component được render ra -->
+
 </div>

@@ -1,0 +1,39 @@
+<form action="" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+    <div class="form-group">
+        <label for="">Tên user</label>
+        <input type="text" class="form-control" name="name" [(ngModel)]="inputValues.name" required minlength="10" #name="ngModel">
+    </div>
+    <span>{{name.errors | json}}</span>
+    <span>{{name.dirty | json}}</span>
+    <!-- validate -->
+    <app-show-validate [field]="name" key="Tên"></app-show-validate>
+
+
+
+    <div class="form-group">
+        <label for="">Tuổi user</label>
+        <input type="number" class="form-control" name="age" [(ngModel)]="inputValues.age" required min="1" max="100" #age="ngModel">
+    </div>
+    <span>{{age.errors | json}}</span>
+    <app-show-validate [field]="age" key="Tuổi"></app-show-validate>
+
+
+    <div class="form-group">
+        <label for="">Email user</label>
+        <input type="email" class="form-control" name="email" [(ngModel)]="inputValues.email" required email #email="ngModel">
+    </div>
+    <span>{{email.errors | json}}</span>
+    <app-show-validate [field]="email" key="Email"></app-show-validate>
+
+    <!-- <div class="form-group">
+        <label for="">Tuổi user</label>
+        <input type="number" class="form-control" name="sdt" [(ngModel)]="inputValues.sdt" required min="10" max="11" #sdt="ngModel">
+        <span>{{age.errors | json}}</span>
+        <app-show-validate [field]="sdt" key="SDT"></app-show-validate>
+    </div> -->
+
+
+    <div>
+        <button class="btn btn-success" [disabled]="!userForm.valid"> Submit</button>
+    </div>
+</form>

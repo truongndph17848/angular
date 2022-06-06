@@ -1,0 +1,14 @@
+<!-- định nghĩa biến quản lý forrm -->
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="" class="form-label"> Name</label>
+        <!-- định nghĩa thuộc tính để lắng nghe -->
+        <input type="text" class="form-control" formControlName="name">
+        <app-show-validate [field]="productForm.get('name')" key="Tên sản phẩm"></app-show-validate>
+        <!-- hoặc dùng 'ngModel' - '#name' trong input  -->
+        <span *ngIf="(productForm.get('name')?.errors?.['hasProductError'])" key="">  </span>
+
+    </div>
+
+    <div><button class="btn btn-success">Submit</button></div>
+</form>
