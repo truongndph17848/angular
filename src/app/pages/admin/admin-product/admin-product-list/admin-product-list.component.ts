@@ -50,6 +50,15 @@ export class AdminProductListComponent implements OnInit {
       } 
   }
 
+  onUpdateStatus(productId: number, newStatus: number) {
+    this.productService.updateProduct(`${productId}`, {
+      
+      status: newStatus
+    }).subscribe(data => {
+      this.onGetList();
+    });
+  }
+
 
 
 }

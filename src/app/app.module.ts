@@ -19,17 +19,21 @@ import { ShowValidateComponent } from './form/show-validate/show-validate.compon
 import { UserComponent } from './user/user.component';
 import { UserListComponent } from './user/user-list/user-list.component';
 import { UserFormComponent } from './user/user-form/user-form.component';
-import { HomeComponent } from './home/home.component';
+
 import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { AdminProductListComponent } from './pages/admin/admin-product/admin-product-list/admin-product-list.component';
 import { AdminProductFormComponent } from './pages/admin/admin-product/admin-product-form/admin-product-form.component';
-import { AdminProductCreateComponent } from './pages/admin/admin-product/admin-product-create/admin-product-create.component';
-import { AdminProductEditComponent } from './pages/admin/admin-product/admin-product-edit/admin-product-edit.component';
 
 import {HttpClientModule} from '@angular/common/http';
 import { AdminProductDetailComponent } from './pages/admin/admin-product/admin-product-detail/admin-product-detail.component';
 import { LoginComponent } from './pages/auth/login/login.component';
+import { ShopComponent } from './pages/client/shop/shop.component';
+import { BlogComponent } from './pages/client/blog/blog.component';
+import { ContactComponent } from './pages/client/contact/contact.component';
+
+import { HomeComponent } from './pages/client/home/home.component';
+import { ShopDetailsComponent } from './pages/client/shop-details/shop-details.component';
 
 
 
@@ -51,10 +55,13 @@ import { LoginComponent } from './pages/auth/login/login.component';
     AdminLayoutComponent,
     AdminProductListComponent,
     AdminProductFormComponent,
-    AdminProductCreateComponent,
-    AdminProductEditComponent,
     AdminProductDetailComponent,
-    LoginComponent
+    LoginComponent,
+    ShopComponent,
+    BlogComponent,
+    ContactComponent,
+    ShopDetailsComponent,
+    
   ],
   imports: [
     BrowserModule,

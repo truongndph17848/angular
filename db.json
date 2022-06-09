@@ -1,30 +1,28 @@
 {
     "products": [{
-            "id": 1,
-            "name": "Iphone 12"
+            "name": "Iphone 13",
+            "status": 0,
+            "_id": 1
         },
         {
-            "name": "Sam Sung",
-            "id": 4
+            "name": "Samsung",
+            "status": 1,
+            "_id": 2
         },
         {
-            "name": "Lenovo 15",
-            "id": 5
+            "name": "Oppo 21",
+            "status": 0,
+            "_id": 3
         },
         {
-            "name": "Xiaomi 11",
-            "id": 6
+            "status": 1,
+            "name": "Xiaomi",
+            "_id": 4
         }
     ],
     "users": [{
-            "id": 1,
-            "email": "truong@fe",
-            "password": "$2a$12$kmmETau7t2ZWAQzu3jBItuq3ZKaC4o/F3Czsgl7rV/BBJRqPNY35i"
-        },
-        {
-            "id": 1,
-            "email": "truong@fe1",
-            "password": "1234567"
-        }
-    ]
+        "_id": 1,
+        "email": "truong@fe",
+        "password": "$2a$12$iRtz0tpxF6GvVYb/6i0ZLORVNchz/AhvDbO7mWX4t6e0ewPoN0Z9u"
+    }]
 }

@@ -1,9 +1,12 @@
-<p>admin-product-detail works!</p>
-
 <div>
     <a routerLink="/admin/products">
         <button class="btn btn-primary"> Quay lại</button>
     </a>
-    <div>ID SP : {{product.id}}</div>
+    <div>ID SP : {{product._id}}</div>
     <div>Tên SP : {{product.name}}</div>
+
+    <div>
+        <input type="number" min="1" [value]="cartItemValue" (input)="onInputValueChang($event)">
+        <button (click)="onAddToCart()">Thêm vào giỏ hàng</button>
+    </div>
 </div>

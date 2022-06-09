@@ -1,23 +1,6 @@
-<router-outlet> </router-outlet>
-
+<router-outlet></router-outlet>
+<!-- 
 <div>
-    <!-- <form action="">
-        <input type="text" (keydown)="changleInput($event)" [value]="inputValue">
-        <span>{{inputValue}}</span>
-    </form> -->
-
-    <div>
-        <h1> Angular form</h1>
-        <div>
-            <!-- <app-form></app-form> -->
-
-            <app-user></app-user>
-        </div>
-    </div>
-
-
-    <hr>
-    <br>
     <p>Form dang ky thong tin giang vien</p>
     <form>
         <div class="form-group">
@@ -57,7 +40,7 @@
     <hr>
     <button class="btn btn-primary" (click)="changTableStatus()"> {{showStatus ? "ẩn" : "hiện"}} </button>
     <table *ngIf="showStatus">
-        <!-- class="{{showStatus ?  'display-block' : 'display-none' }}" -->
+        class="{{showStatus ? 'display-block' : 'display-none' }}"
         <thead>
             <tr>
                 <th>mã sv</th>
@@ -91,12 +74,11 @@
     <h1>Router</h1>
     <nav>
         <ul>
-            <!-- sử dụng routerlink thay vì href sẽ bị load lại -->
             <li><a routerLink="/">Home</a></li>
             <li><a routerLink="/user">User</a></li>
             <li><a routerLink="/admin">admin</a></li>
         </ul>
     </nav>
-    <!-- đây là nơi component được render ra -->
 
-</div>
+
+</div> -->
