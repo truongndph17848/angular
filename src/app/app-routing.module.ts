@@ -7,6 +7,9 @@ import { AdminProductDetailComponent } from './pages/admin/admin-product/admin-p
 import { AdminProductFormComponent } from './pages/admin/admin-product/admin-product-form/admin-product-form.component';
 import { AdminProductListComponent } from './pages/admin/admin-product/admin-product-list/admin-product-list.component';
 import { LoginComponent } from './pages/auth/login/login.component';
+import { BlogComponent } from './pages/client/blog/blog.component';
+import { CartListComponent } from './pages/client/cart-list/cart-list.component';
+import { ContactComponent } from './pages/client/contact/contact.component';
 import { HomeComponent } from './pages/client/home/home.component';
 import { ShopDetailsComponent } from './pages/client/shop-details/shop-details.component';
 import { UserFormComponent } from './user/user-form/user-form.component';
@@ -29,6 +32,18 @@ const routes: Routes = [
       {
         path: 'shop-details/:id',
         component: ShopDetailsComponent,
+      },
+      {
+        path: 'blog',
+        component: BlogComponent,
+      },
+      {
+        path: 'cart-list',
+        component: CartListComponent,
+      },
+      {
+        path: 'contact',
+        component: ContactComponent,
       }
     ]
   },

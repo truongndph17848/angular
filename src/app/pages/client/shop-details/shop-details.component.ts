@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
 import { ProductService } from 'src/app/services/product.service';
 import { Product } from 'src/app/types.ts/Product';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-shop-details',
@@ -15,7 +16,8 @@ export class ShopDetailsComponent implements OnInit {
   constructor(
     private productService: ProductService,
               private activateRoute: ActivatedRoute,
-              private lsService: LocalStorageService
+              private lsService: LocalStorageService,
+              private toastr: ToastrService,
   ) {
     this.product = {
       _id: 0,
@@ -31,6 +33,8 @@ export class ShopDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     const idFromUrl = this.activateRoute.snapshot.params['id'];
+    console.log(idFromUrl);
+    
 
     this.productService.getProduct(idFromUrl).subscribe(data => {
       this.product = data;
@@ -48,6 +52,12 @@ export class ShopDetailsComponent implements OnInit {
     const addItem = {
       _id: this.product._id,
       name: this.product.name,
+      price: this.product.price,
+      sale_price: this.product.sale_price,
+      description: this.product.description,
+      image_url: this.product.image_url,
+      status: this.product.status,
+      category_id: this.product.category_id,
       value: +this.cartItemValue
     };
     // //2. kiểm tra xem  đã có sp trong giỏ hàng chưa
@@ -74,6 +84,10 @@ export class ShopDetailsComponent implements OnInit {
     this.lsService.setItem(addItem);
     //5. cập nhật lại giá trị cho ô input
     this.cartItemValue = 1;
+
+    // window.confirm("bạn có muốn thêm sản phẩm này không");
+
+    this.toastr.success("bạn đã thêm sản phẩm thành công");
   }
 
   

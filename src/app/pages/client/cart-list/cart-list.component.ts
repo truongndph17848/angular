@@ -2,19 +2,21 @@ import { Component, OnInit } from '@angular/core';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
 import { ProductCart } from 'src/app/types.ts/Product';
 
+
+
 @Component({
-  selector: 'app-cart',
-  templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.css']
+  selector: 'app-cart-list',
+  templateUrl: './cart-list.component.html',
+  styleUrls: ['./cart-list.component.css']
 })
-export class CartComponent implements OnInit {
+export class CartListComponent implements OnInit {
   cartItems: ProductCart[] = [];
   cartItemValues: number = 0;
-
   constructor(
     private lsService: LocalStorageService
-  ) { }
-  
+  ) {
+
+  }
 
   ngOnInit(): void {
     this.onSetCartItems();
@@ -34,5 +36,6 @@ export class CartComponent implements OnInit {
       this.cartItemValues += item.value;
     });
   }
-
 }
+
+

@@ -50,6 +50,12 @@ export class AdminProductDetailComponent implements OnInit {
     const addItem = {
       _id: this.product._id,
       name: this.product.name,
+      price: this.product.price,
+      sale_price: this.product.sale_price,
+      description: this.product.description,
+      image_url: this.product.image_url,
+      status: this.product.status,
+      category_id: this.product.category_id,
       value: +this.cartItemValue
     };
     // //2. kiểm tra xem  đã có sp trong giỏ hàng chưa

@@ -1,22 +1,22 @@
-<div>
-
-    <a routerLink="/admin/products">
-        <button class="btn btn-primary"> Quay lại</button>
-    </a>
+<!-- <div>
     <div>ID SP : {{product._id}}</div>
     <div>Tên SP : {{product.name}}</div>
-
+    <div>Giá Sp : {{product.price}}</div>
+    <div>Giá Km : {{product.sale_price}}</div>
+    <div>Mô tả : {{product.description}}</div>
+    <div>Image : {{product.image_url}}</div>
+    <div>Status : {{product.status}}</div>
     <div>
         <input type="number" min="1" [value]="cartItemValue" (input)="onInputValueChang($event)">
         <button (click)="onAddToCart()">Thêm vào giỏ hàng</button>
     </div>
-</div>
+</div> -->
 
 
 
 
 
-<!-- 
+
 <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb.jpg">
     <div class="container">
         <div class="row">
@@ -44,7 +44,7 @@
             <div class="col-lg-6 col-md-6">
                 <div class="product__details__pic">
                     <div class="product__details__pic__item">
-                        <img class="product__details__pic__item--large" src="img/product/details/product-details-1.jpg" alt="">
+                        <img class="product__details__pic__item--large" src="{{product.image_url}}" alt="">
                     </div>
                     <div class="product__details__pic__slider owl-carousel">
                         <img data-imgbigurl="img/product/details/product-details-2.jpg" src="img/product/details/thumb-1.jpg" alt="">
@@ -56,7 +56,7 @@
             </div>
             <div class="col-lg-6 col-md-6">
                 <div class="product__details__text">
-                    <h3>Vetgetable’s Package</h3>
+                    <h3>{{product.name}}</h3>
                     <div class="product__details__rating">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -65,18 +65,26 @@
                         <i class="fa fa-star-half-o"></i>
                         <span>(18 reviews)</span>
                     </div>
-                    <div class="product__details__price">$50.00</div>
+                    <div class="product__details__price">{{product.price}}$</div>
                     <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Proin
                         eget tortor risus.</p>
+
+
                     <div class="product__details__quantity">
                         <div class="quantity">
                             <div class="pro-qty">
-                                <input type="text" value="1">
+                                <input type="number" min="1" [value]="cartItemValue" (input)="onInputValueChang($event)">
                             </div>
                         </div>
                     </div>
-                    <a href="#" class="primary-btn">ADD TO CARD</a>
+
+                    <button class="primary-btn" (click)="onAddToCart()">ADD TO CARD</button>
                     <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+
+
+
+
+
                     <ul>
                         <li><b>Availability</b> <span>In Stock</span></li>
                         <li><b>Shipping</b> <span>01 day shipping. <samp>Free pickup today</samp></span></li>
@@ -143,4 +151,4 @@
             </div>
         </div>
     </div>
-</section> -->
+</section>
