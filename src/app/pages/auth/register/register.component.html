@@ -1,0 +1,21 @@
+<form>
+
+    <div class="form-group" [formGroup]="RegisterForm" (ngSubmit)="onSubmit()">
+
+    </div>
+
+    <div class="form-group">
+        <label for=""> email</label>
+        <input type="text" type="email" class="form-control" formControlName="email">
+    </div>
+
+    <div class="form-group">
+        <label for=""> password</label>
+        <input type="text" type="email" class="form-control" formControlName="password">
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-primary"> Register</button>
+    </div>
+
+</form>

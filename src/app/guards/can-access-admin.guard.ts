@@ -17,11 +17,13 @@ export class CanAccessAdminGuard implements CanActivate {
     // return true;
     //1. lấy ra thông tin user trong localstorage
     const loggedInUser = localStorage.getItem('loggedInUser');
-    //2. kiểm tra xem thông tin có chính xác k
     if(loggedInUser){
+      const { user } = JSON.parse(localStorage.getItem('loggedInUser') as string)
+       if (user.role) {
       return true;
     }
-    //3. nếu đúng thì đi tiếp, sau thì quay về login
+}
+    
     this.router.navigateByUrl('/auth/login');
     return false
   }

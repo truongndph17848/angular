@@ -22,10 +22,15 @@ export class AdminProductFormComponent implements OnInit {
       name: new FormControl('', [
         Validators.required,
         Validators.minLength(6),
-        Validators.maxLength(32),
+        Validators.maxLength(100),
         this.onValidateNameHasProduct // chỉ gọi lại tên của hàm validate
       ]), // FormControl(giá trị mặc định)
-      // price: new FormControl(0)
+      price: new FormControl(0),
+      sale_price: new FormControl(0),
+      description: new FormControl(""),
+      image_url: new FormControl(""),
+      status: new FormControl(0),
+      category_id: new FormControl(0),
     });
     this.productId = '';
   }
@@ -33,12 +38,19 @@ export class AdminProductFormComponent implements OnInit {
   ngOnInit(): void {
     this.productId = this.activateRoute.snapshot.params['id']; // +'5'
 
+
     if (this.productId) {
       this.productService.getProduct(+this.productId).subscribe(data => {
         // Cập nhật data cho form (data: {id: 5, name: '...'})
         this.productForm.patchValue({
           name: data.name,
-          // price: data.price
+          price: data.price,
+          sale_price: data.sale_price,
+          description: data.description,
+          image_url: data.image_url,
+          status: data.status,
+          category_id: data.category_id,
+
         });
       })
     }

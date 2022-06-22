@@ -1,0 +1,43 @@
+<div class="pcoded-main-container">
+    <div class="pcoded-wrapper">
+        <div class="pcoded-content">
+            <div class="pcoded-inner-content">
+                <div class="main-body">
+
+
+
+
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Username</th>
+                                <th>email </th>
+                                <th>password</th>
+
+                                <th [colSpan]="3">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let user of users">
+                                <td>{{user._id}}</td>
+                                <td>{{user.username}}</td>
+                                <td>{{user.email}}</td>
+                                <td>{{user.password}}</td>
+
+
+                                <td> <button class="btn btn-danger" (click)="onDelete(user._id)"> Delete</button></td>
+                                <!-- <td>
+                                    <a [routerLink]="['/admin', 'products', category._id]"> <button class="btn btn-info">Detail</button></a>
+                                </td> -->
+
+                        </tbody>
+                    </table>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

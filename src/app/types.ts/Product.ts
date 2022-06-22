@@ -10,6 +10,8 @@ export type Product = {
 }
 
 
+
+
 export type ProductCreate = {
     name?: string,
     status?: number

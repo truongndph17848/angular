@@ -33,6 +33,11 @@ import { CartListComponent } from './pages/client/cart-list/cart-list.component'
 import { ToastrModule } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DashboradComponent } from './component/dashborad/dashborad.component';
+import { AdminCategoryListComponent } from './pages/admin/admin-category/admin-category-list/admin-category-list.component';
+import { AdminCategoryFormComponent } from './pages/admin/admin-category/admin-category-form/admin-category-form.component';
+import { AdminUserListComponent } from './pages/admin/admin-user/admin-user-list/admin-user-list.component';
+import { RegisterComponent } from './pages/auth/register/register.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +64,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ContactComponent,
     ShopDetailsComponent,
     CartListComponent,
+    DashboradComponent,
+    AdminCategoryListComponent,
+    AdminCategoryFormComponent,
+    AdminUserListComponent,
+    RegisterComponent,
     
     
   ],

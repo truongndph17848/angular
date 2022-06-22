@@ -1,0 +1,37 @@
+<div class="pcoded-main-container">
+    <div class="pcoded-wrapper">
+        <div class="pcoded-content">
+            <div class="pcoded-inner-content">
+                <div class="main-body">
+
+
+                    <form [formGroup]="CategoryForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <label for="">Name</label>
+                            <!-- Định nghĩa thuộc tính để lắng nghe input -->
+                            <input type="text" class="form-control" formControlName="name">
+
+
+                            <!-- <input type="text" class="form-control" formControlName="price"> -->
+                            <!-- <div>
+                            <span *ngIf="(productForm.get('name')?.dirty || productForm.get('name')?.touched) && productForm.get('name')?.errors?.['required']">
+                              Tên sp không được để trống
+                            </span>
+                          </div> -->
+                            <!-- productForm.get('tên thuộc tính = new FormGroup()') sẽ là kết quả khi lắng nghe -->
+                            <app-show-validate [field]="CategoryForm.get('name')" key="Tên sản phẩm"></app-show-validate>
+                        </div>
+
+
+                        <div>
+                            <button class="btn btn-success" [disabled]="CategoryForm.valid">Submit</button>
+                        </div>
+                    </form>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
