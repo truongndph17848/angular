@@ -24,7 +24,7 @@ export class CanAccessAdminGuard implements CanActivate {
     }
 }
     
-    this.router.navigateByUrl('/auth/login');
+    this.router.navigateByUrl('/');
     return false
   }
   
