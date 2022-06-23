@@ -9,7 +9,9 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  // FormGroup lưu giữ giá trị và trạng thái hợp lệ của một nhóm các đối
   loginForm: FormGroup;
+
   constructor(private authService: AuthService , private router: Router) {
 
     this.loginForm = new FormGroup({

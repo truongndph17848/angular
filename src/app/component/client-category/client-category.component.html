@@ -5,8 +5,8 @@
         </div>
         <div class="featured__controls">
 
-            <ul *ngFor="let categories of categories">
-                <li><a routerLink="/categorys/{{categories._id}}" (click)="onGetCategory(categories._id)">{{categories.name}}</a></li>
+            <ul *ngFor="let category of categories">
+                <li><a routerLink="/categorys/{{category._id}}" (click)="onGetCategory(category._id)">{{category.name}}</a></li>
             </ul>
         </div>
     </div>

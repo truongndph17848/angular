@@ -8,8 +8,8 @@ import { TypeLoginRegister, TypeLoginRequest, TypeLoginResponse, User } from '..
   providedIn: 'root'
 })
 export class AuthService {
-
-  constructor( private http: HttpClient) {
+  // HttpClient là 1 service model giúp ta gửi dữ liệu dễ hơn
+  constructor( private http: HttpClient) {      
    }
 
   login(data: TypeLoginRequest): Observable<TypeLoginResponse> {

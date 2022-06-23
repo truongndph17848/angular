@@ -23,7 +23,7 @@ export class HeaderClientComponent implements OnInit {
     this.toastr.success('','Đăng xuất thành công @@',{
       timeOut : 1000
     })
-    this.router.navigateByUrl('/sign-in')
+    this.router.navigateByUrl('/auth/login')
   }
   
 }

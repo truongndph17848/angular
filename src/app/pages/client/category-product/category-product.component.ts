@@ -14,9 +14,9 @@ export class CategoryProductComponent implements OnInit {
     private categoryService: CategoryService,
   ) {
     this.category = {
-      _id : "",
+      _id : 0,
       name : "",
-      status : true,
+      status : 0,
     }
    
    }
