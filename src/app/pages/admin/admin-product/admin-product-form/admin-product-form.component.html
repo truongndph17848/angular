@@ -21,7 +21,10 @@
                             </span>
                           </div> -->
                             <!-- productForm.get('tên thuộc tính = new FormGroup()') sẽ là kết quả khi lắng nghe -->
-                            <app-show-validate [field]="productForm.get('name')" key="Tên sản phẩm"></app-show-validate>
+
+
+
+                            <!-- <app-show-validate [field]="productForm.get('name')" key="Tên sản phẩm"></app-show-validate> -->
                         </div>
 
 
@@ -51,15 +54,19 @@
                             <input type="text" class="form-control" formControlName="status">
                         </div>
 
-                        <div class="form-group">
-                            <label for="">category_id</label>
-                            <input type="text" class="form-control" formControlName="category_id">
+                        <div>
+                            <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Danh mục</label>
+                            <select formControlName="category_id" id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                              <option disabled selected>Vui lòng chọn danh mục</option>
+                              <option *ngFor="let category of categories" value="{{category._id}}">{{category.name}}</option>
+                            </select>
                         </div>
 
 
 
                         <div>
-                            <button class="btn btn-success" [disabled]="!productForm.valid">Submit</button>
+                            <!-- <button class="btn btn-success" [disabled]="!productForm.valid">Submit</button> -->
+                            <button class="btn btn-success">Submit</button>
                         </div>
                     </form>
 

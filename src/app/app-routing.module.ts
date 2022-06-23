@@ -14,6 +14,7 @@ import { LoginComponent } from './pages/auth/login/login.component';
 import { RegisterComponent } from './pages/auth/register/register.component';
 import { BlogComponent } from './pages/client/blog/blog.component';
 import { CartListComponent } from './pages/client/cart-list/cart-list.component';
+import { CategoryProductComponent } from './pages/client/category-product/category-product.component';
 import { ContactComponent } from './pages/client/contact/contact.component';
 import { HomeComponent } from './pages/client/home/home.component';
 import { ShopDetailsComponent } from './pages/client/shop-details/shop-details.component';
@@ -100,6 +101,10 @@ const routes: Routes = [
           {
             path: 'edit/:id',
             component: AdminCategoryFormComponent
+          },
+          {
+            path: ':id',
+            component: CategoryProductComponent
           }
         ],
       },

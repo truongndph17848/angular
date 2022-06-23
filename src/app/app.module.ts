@@ -24,7 +24,6 @@ import { AdminProductFormComponent } from './pages/admin/admin-product/admin-pro
 import {HttpClientModule} from '@angular/common/http';
 import { AdminProductDetailComponent } from './pages/admin/admin-product/admin-product-detail/admin-product-detail.component';
 import { LoginComponent } from './pages/auth/login/login.component';
-import { ShopComponent } from './pages/client/shop/shop.component';
 import { BlogComponent } from './pages/client/blog/blog.component';
 import { ContactComponent } from './pages/client/contact/contact.component';
 import { HomeComponent } from './pages/client/home/home.component';
@@ -38,6 +37,9 @@ import { AdminCategoryListComponent } from './pages/admin/admin-category/admin-c
 import { AdminCategoryFormComponent } from './pages/admin/admin-category/admin-category-form/admin-category-form.component';
 import { AdminUserListComponent } from './pages/admin/admin-user/admin-user-list/admin-user-list.component';
 import { RegisterComponent } from './pages/auth/register/register.component';
+import { HeaderClientComponent } from './component/header-client/header-client.component';
+import { ClientCategoryComponent } from './component/client-category/client-category.component';
+import { CategoryProductComponent } from './pages/client/category-product/category-product.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +61,6 @@ import { RegisterComponent } from './pages/auth/register/register.component';
     AdminProductFormComponent,
     AdminProductDetailComponent,
     LoginComponent,
-    ShopComponent,
     BlogComponent,
     ContactComponent,
     ShopDetailsComponent,
@@ -69,6 +70,9 @@ import { RegisterComponent } from './pages/auth/register/register.component';
     AdminCategoryFormComponent,
     AdminUserListComponent,
     RegisterComponent,
+    HeaderClientComponent,
+    ClientCategoryComponent,
+    CategoryProductComponent,
     
     
   ],

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormControl, Validators, AbstractControl, ValidationErrors} from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CategoryService } from 'src/app/services/category.service';
+import { Category } from 'src/app/types.ts/Category';
 import { ProductService } from '../../../../services/product.service';
 
 @Component({
@@ -9,13 +11,15 @@ import { ProductService } from '../../../../services/product.service';
   styleUrls: ['./admin-product-form.component.css']
 })
 export class AdminProductFormComponent implements OnInit {
+  categories : Category[]
   productForm: FormGroup;
   productId: string;
 
   constructor(
     private productService: ProductService, // các phương thức call API
     private router: Router, // điều hướng,
-    private activateRoute: ActivatedRoute // lấy các tham số trên url
+    private activateRoute: ActivatedRoute, // lấy các tham số trên url
+    private categoryService: CategoryService,
   ) {
     this.productForm = new FormGroup({
       // name: new FormControl('', Validators.required), // FormControl(giá trị mặc định)
@@ -33,11 +37,15 @@ export class AdminProductFormComponent implements OnInit {
       category_id: new FormControl(0),
     });
     this.productId = '';
+    this.categories = []
   }
 
   ngOnInit(): void {
     this.productId = this.activateRoute.snapshot.params['id']; // +'5'
 
+    this.categoryService.getCategorys().subscribe(categories => {
+      this.categories = categories
+    })
 
     if (this.productId) {
       this.productService.getProduct(+this.productId).subscribe(data => {
